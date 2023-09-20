@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:first_app/gradient_container.dart';
 
 void main() {
   //fungsi yang ke run otomatis
   runApp(
     const MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello Flutter User'),
-        ),
+        body: GradientContainer(coloris : [Colors.deepOrange, Colors.yellowAccent]),
       ),
     ),
-  ); 
+  );
   //fungsinya buat nampilin widget ui
   //argumen diisi lagi di dalem runApp
   //const itu intinya optimasi memori
