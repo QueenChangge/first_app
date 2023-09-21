@@ -5,9 +5,11 @@ import 'package:first_app/gradient_container.dart';
 void main() {
   //fungsi yang ke run otomatis
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        body: GradientContainer(Colors.deepOrange, Colors.yellowAccent),
+        body: GradientContainer(
+          Colors.deepOrange, 
+          Colors.yellowAccent),
         //body: GradientContainer.blue(), //untuk named konstruktor
       ),
     ),

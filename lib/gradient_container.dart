@@ -4,17 +4,21 @@ import 'package:flutter/material.dart';
 
 // classnya ini nanti bisa dipanggil sama void main
 class GradientContainer extends StatelessWidget {
-  const GradientContainer(this.theColors, this.theColors2,
+  GradientContainer(this.theColors, this.theColors2,
       {super.key}); //adalah jenis konstruktor biasa
 
   // kita bisa juga menambah konstruktor manual
-  const GradientContainer.blue({super.key})
+  GradientContainer.blue({super.key})
       : theColors = Colors.lightBlue,
         theColors2 = Colors.blueAccent;
 
   final Color theColors, theColors2;
 
-  void rollDice() {}
+  var activeDiceImage = 'assets/images/dice-2.png';
+  void rollDice() {
+    activeDiceImage = 'assets/images/dice-4.png';
+    print('change image');
+  }
 
   @override
   Widget build(context) {
@@ -29,7 +33,7 @@ class GradientContainer extends StatelessWidget {
       child: Center(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           Image.asset(
-            'assets/images/dice-2.png',
+            activeDiceImage,
             width: 200,
           ),
           TextButton(
