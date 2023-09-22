@@ -5,7 +5,7 @@ import 'package:first_app/gradient_container.dart';
 void main() {
   //fungsi yang ke run otomatis
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
         body: GradientContainer(
           Colors.deepOrange, 
